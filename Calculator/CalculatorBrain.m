@@ -35,6 +35,15 @@
 	if ([@"sqrt" isEqual:operation]){
 		operand = sqrt(operand);
 	}
+	else if ([@"sin" isEqual:operation]){
+		operand =  sin(operand);
+	}
+	else if ([@"cos" isEqual:operation]){
+		operand =  cos(operand);
+	}
+	else if ([@"1/x" isEqual:operation]){
+		operand = 1/operand;
+	}
 	else if ([@"+/-" isEqual:operation]){
 		operand = - operand;
 	}
