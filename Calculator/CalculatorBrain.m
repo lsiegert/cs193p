@@ -47,6 +47,21 @@
 	else if ([@"+/-" isEqual:operation]){
 		operand = - operand;
 	}
+	else if ([@"store" isEqual:operation]){
+		memory = operand;
+	}
+	else if ([@"recall" isEqual:operation]){
+		operand = memory;
+	}
+	else if ([@"mem+" isEqual:operation]){
+		memory = memory + operand;
+	}
+	else if ([@"c" isEqual:operation]){
+		memory = 0;
+		operand = 0;
+		waitingOperand = 0;
+		waitingOperation = NULL;
+	}
 	else {
 		[self performWaitingOperation];
 		waitingOperation = operation;

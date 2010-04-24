@@ -11,8 +11,9 @@
 
 @interface CalculatorBrain : NSObject {
 	double operand;
-	NSString *waitingOperation;
+	double memory;
 	double waitingOperand;
+	NSString *waitingOperation;
 }
 
 - (void)setOperand:(double)aDouble;
